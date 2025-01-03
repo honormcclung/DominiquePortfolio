@@ -1,8 +1,11 @@
+// Select the hamburger menu toggle button
 const menuToggle = document.getElementById('menu-toggle');
-const navLeft = document.querySelector('.nav-links.nav-left');
-const navRight = document.querySelector('.nav-links.nav-right');
 
+// Select the dropdown menu for the hamburger navigation
+const hamburgerMenu = document.getElementById('hamburger-menu-links');
+
+// Add event listener to toggle the hamburger menu visibility
 menuToggle.addEventListener('click', () => {
-  navLeft.classList.toggle('active');
-  navRight.classList.toggle('active');
+  // Toggle the 'active' class on the hamburger menu
+  hamburgerMenu.classList.toggle('active');
 });
