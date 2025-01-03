@@ -35,7 +35,7 @@ body {
   
   .nav-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Ensure equal spacing on both sides */
     align-items: center;
     max-width: 900px;
     margin: 0 auto;
@@ -44,16 +44,20 @@ body {
   
   .nav-links {
     display: flex;
+    align-items: center; /* Align links vertically */
     list-style: none;
     gap: 15px;
+    flex: 1; /* Allow links to take equal space */
   }
   
   .nav-links.nav-left {
-    margin-right: auto;
+    justify-content: flex-end; /* Align links to the right */
+    padding-right: 10px;
   }
   
   .nav-links.nav-right {
-    margin-left: auto;
+    justify-content: flex-start; /* Align links to the left */
+    padding-left: 10px;
   }
   
   .nav-links li a {
@@ -62,6 +66,7 @@ body {
     font-size: 1.1em;
     padding: 10px 15px;
     transition: background 0.3s ease;
+    white-space: nowrap; /* Prevents text wrapping */
   }
   
   .nav-links li a:hover {
@@ -71,9 +76,10 @@ body {
   
   .logo {
     display: flex;
-    align-items: center;
+    align-items: center; /* Align logo vertically */
     justify-content: center;
     margin: 0 20px;
+    flex: 0; /* Prevent the logo from stretching */
   }
   
   .logo img {
@@ -151,7 +157,7 @@ body {
   }
   
   /* Responsive Styles */
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .menu-toggle {
       display: block;
       margin-left: 10px;
