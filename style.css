@@ -36,10 +36,9 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  nav .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #fff;
+  nav .logo img {
+    height: 50px;
+    width: auto;
   }
   
   nav .nav-links {
@@ -106,6 +105,13 @@ body {
     margin-right: 10px;
   }
   
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
   /* Footer */
   footer {
     text-align: center;
@@ -164,6 +170,10 @@ body {
   
     header p {
       font-size: 1.2em;
+    }
+  
+    nav .logo img {
+      height: 40px;
     }
   }
   
