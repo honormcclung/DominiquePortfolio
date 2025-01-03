@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: #fff;
+  }
+  
+  nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background 0.3s;
+  }
+  
+  nav .nav-links li a:hover {
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  nav .menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+  
+  /* Sections */
+  section {
+    padding: 20px;
+    margin: 20px;
+    background: #fff;
+    border-left: 5px solid #003366;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    color: #003366;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #003366;
+    color: #fff;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    nav .nav-links {
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #003366;
+      width: 200px;
+      display: none;
+      padding: 10px 0;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+  
+    nav .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    nav .menu-toggle {
+      display: block;
+    }
+  
+    nav .nav-links.active {
+      display: flex;
+    }
+  }
+  
