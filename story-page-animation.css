@@ -1,0 +1,63 @@
+/* story-page-animation.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+.story-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Ensure spacing for content */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px); /* Adjust initial transform */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.story-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-image {
+    width: 40%;
+    max-width: 400px;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: scale(0.8); /* Start smaller */
+    transition: transform 0.6s ease; /* Smooth scale animation */
+}
+
+.story-section.visible .story-image {
+    transform: scale(1); /* Return to normal size */
+}
+
+.story-text {
+    width: 40%;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    transform: translateX(-50px); /* Offset left initially */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.story-section.visible .story-text {
+    transform: translateX(0); /* Slide into place */
+}
