@@ -1,4 +1,4 @@
-/* story-page-animation.css */
+/* General styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,6 +6,68 @@ body {
     overflow-x: hidden;
 }
 
+/* Navigation Bar Styles */
+nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: gray;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+/* Responsive Navbar for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on smaller screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle for hamburger menu */
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+/* Story container */
 .story-container {
     width: 100%;
     display: flex;
@@ -16,7 +78,8 @@ body {
 .story-section {
     display: flex;
     align-items: center;
-    justify-content: space-around; /* Ensure spacing for content */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
     height: 100vh;
     width: 100%;
     position: relative;
@@ -30,9 +93,24 @@ body {
     transform: translateY(0);
 }
 
+/* Title styles */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute; /* Position title closer to the content */
+    top: 5%; /* Position the title relative to the section */
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+}
+
+/* Image styles */
 .story-image {
-    width: 40%;
-    max-width: 400px;
+    width: 45%; /* Adjust size for better proportions */
+    max-width: 500px;
     margin: 20px;
     object-fit: cover;
     border-radius: 10px;
@@ -44,8 +122,9 @@ body {
     transform: scale(1); /* Return to normal size */
 }
 
+/* Text box styles */
 .story-text {
-    width: 40%;
+    width: 45%;
     max-width: 400px;
     margin: 20px;
     padding: 20px;
@@ -54,7 +133,7 @@ body {
     border-radius: 10px;
     font-size: 1.2em;
     line-height: 1.5em;
-    transform: translateX(-50px); /* Offset left initially */
+    transform: translateX(-50px); /* Offset for animation */
     transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
